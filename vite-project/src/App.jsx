@@ -4,6 +4,9 @@ import { useState } from "react";
 
 function App() {
     const [score, setScore] = useState(0);
+    function playBtn() {
+        setScore(score + 1);
+    }
     return (
         <>
             <h1>Rock Paper Scissors</h1>
@@ -17,6 +20,7 @@ function App() {
                     <img src="https://placekitten.com/200/300" alt="" />
                 </div>
             </div>
+            <button onClick={playBtn}>Play</button>
         </>
     );
 }
